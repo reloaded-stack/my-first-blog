@@ -10,17 +10,13 @@
         </div>
 
 
-        <div>
-            <p>published: 06/08/2020</p>
-            <h2>Refecting on what I have studied this year.</h2>
-            <p style="color:blue;"> This post will reflect on my studies this year.</p>
-        </div>
-
-
-        <div>
-            <h2>What I look forward to learning in the upcoming first year CompSci.</h2>
-            <p style="color:blue;">This post will detail what I look forward to learning in first year.</p>
-        </div>
+        {% for post in posts %}
+		<div>
+        		<p>published: {{ post.published_date }}</p>
+        		<h2><a href="">{{ post.title }}</a></h2>
+        		<p>{{ post.text|linebreaksbr }}</p>
+    		</div>
+	{% endfor %}
 
 
   	<div>
